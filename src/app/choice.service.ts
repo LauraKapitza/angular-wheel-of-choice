@@ -17,6 +17,11 @@ export class ChoiceService {
     return this.choices
   }
 
+  removeChoice(input: any) {
+    let index = this.choices.indexOf(input)
+    this.choices.splice(index, 1)
+  }
+
   clearChoices() {
     this.choices = [];
     return this.choices

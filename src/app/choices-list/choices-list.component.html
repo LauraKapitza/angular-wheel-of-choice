@@ -1,12 +1,15 @@
 <h2>Choices</h2>
 
 <form [formGroup]="choiceForm" (ngSubmit)="onSubmit()">
+
+
     <label for="description">
-        <input type="text" formControlName="description">
+        <input type="text" formControlName="description" required #name="ngModel">
     </label>
     <button class="button" type="submit">Add</button>
 </form>
 
 <div *ngFor="let choice of choices">
-    <p>{{choice.description}}</p>
+    <span>{{choice.description}}</span>
+    <button class="remove-btn" (click)="removeChoice(choice)">Remove</button>
 </div>
