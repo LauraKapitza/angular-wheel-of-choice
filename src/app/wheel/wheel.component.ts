@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wheel',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WheelComponent implements OnInit {
 
-  constructor() { }
+  @Input() choices: any;
+
+  constructor(  ) { }
+
+  rotateFunction() {
+    console.warn('Spin spin spin')
+  }
 
   ngOnInit(): void {
   }

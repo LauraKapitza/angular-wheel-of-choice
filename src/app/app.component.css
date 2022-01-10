@@ -18,6 +18,7 @@ h1 {
   }
   /* everywhere else */
   * {
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
   }
 

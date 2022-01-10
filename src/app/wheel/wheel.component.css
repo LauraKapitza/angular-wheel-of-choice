@@ -1,0 +1,30 @@
+.wheelbox {
+    background: grey;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+} */
+
+.spin-btn {
+    background: rgb(60, 60, 242);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    height: 50px;
+    margin: 0;
+    outline: solid white;
+    padding: 0;
+    width: 50px;
+    /* background-size: cover; */
+}

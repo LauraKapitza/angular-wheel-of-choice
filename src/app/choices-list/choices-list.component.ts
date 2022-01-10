@@ -23,12 +23,10 @@ export class ChoicesListComponent {
 
   removeChoice(choice: any) {
     this.choiceService.removeChoice(choice)
-    console.warn('Your choice has been removed', choice.description)
   }
 
   onSubmit(): void {
     this.choiceService.addChoice(this.choiceForm.value)
-    console.warn('Your choice has been added', this.choiceForm.value)
     this.choiceForm.reset()
   }
 
