@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Chart } from 'chart.js';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ChoiceService {
+export class DataService {
 
   choices : any[] = [];
+  frequencies : any[] = [1]
 
   constructor() { }
 
@@ -26,4 +28,20 @@ export class ChoiceService {
     this.choices = [];
     return this.choices
   }
+
+  getFrequencies() {
+    return this.frequencies
+  }
+
+  updateFrequencies() {
+    this.choices.forEach(choice => {
+      this.frequencies.push(1)
+    })
+  }
+
+  updateChart(chart: any) {
+    chart.data.datasets.data = this.frequencies;
+    chart.update()
+  }
+
 }

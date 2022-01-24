@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
-import { ChoiceService } from '../choice.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-choices-list',
@@ -10,23 +10,24 @@ import { ChoiceService } from '../choice.service';
 })
 export class ChoicesListComponent {
 
-  choices = this.choiceService.getChoices()
+  choices = this.dataService.getChoices()
 
   choiceForm = this.formBuilder.group({
     description: '',
   })
 
   constructor(
-    private choiceService: ChoiceService,
+    private dataService: DataService,
     private formBuilder: FormBuilder,
   ) {}
 
   removeChoice(choice: any) {
-    this.choiceService.removeChoice(choice)
+    this.dataService.removeChoice(choice)
   }
 
   onSubmit(): void {
-    this.choiceService.addChoice(this.choiceForm.value)
+    this.dataService.addChoice(this.choiceForm.value);
+    this.dataService.updateFrequencies();
     this.choiceForm.reset()
   }
 
