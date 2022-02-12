@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid blue;
+    border-radius: 100%;
+    background-color: #f1f1f1;
 }
 
 #myChart {
@@ -22,5 +25,5 @@
     width: 60px;
     /* position setting*/
     position: absolute;
-    top: 274px;
+    top: 270px;
 }

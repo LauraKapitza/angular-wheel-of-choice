@@ -27,7 +27,7 @@ export class ChoicesListComponent {
 
   onSubmit(): void {
     this.dataService.addChoice(this.choiceForm.value);
-    this.dataService.updateFrequencies();
+    this.dataService.updateWheel();
     this.choiceForm.reset()
   }
 
